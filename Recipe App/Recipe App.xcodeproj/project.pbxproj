@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297375372CC635710070D793 /* Main Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375362CC635710070D793 /* Main Page.swift */; };
+		2973753B2CC78B230070D793 /* New Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973753A2CC78B230070D793 /* New Recipe.swift */; };
+		2973753D2CC808090070D793 /* Food Recipes  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973753C2CC808090070D793 /* Food Recipes  .swift */; };
+		297375432CC9859C0070D793 /* Add Ingrediant  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375422CC9859C0070D793 /* Add Ingrediant  .swift */; };
+		297375452CC986EB0070D793 /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375442CC986EB0070D793 /* CustomPopupView.swift */; };
+		297375472CCA1EA10070D793 /* Cake Baker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375462CCA1EA10070D793 /* Cake Baker.swift */; };
+		297375492CCA21BF0070D793 /* WaterTraker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375482CCA21BF0070D793 /* WaterTraker.swift */; };
+		2973754B2CCA22030070D793 /* WaterTraker 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973754A2CCA22030070D793 /* WaterTraker 2.swift */; };
+		2973754D2CCD5E460070D793 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973754C2CCD5E460070D793 /* Test.swift */; };
 		29DAA6742CC62FB200862EA1 /* Recipe_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DAA6732CC62FB200862EA1 /* Recipe_AppApp.swift */; };
 		29DAA6762CC62FB200862EA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DAA6752CC62FB200862EA1 /* ContentView.swift */; };
 		29DAA6782CC62FB200862EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DAA6772CC62FB200862EA1 /* Assets.xcassets */; };
@@ -34,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		297375362CC635710070D793 /* Main Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Page.swift"; sourceTree = "<group>"; };
+		2973753A2CC78B230070D793 /* New Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New Recipe.swift"; sourceTree = "<group>"; };
+		2973753C2CC808090070D793 /* Food Recipes  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food Recipes  .swift"; sourceTree = "<group>"; };
+		297375422CC9859C0070D793 /* Add Ingrediant  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add Ingrediant  .swift"; sourceTree = "<group>"; };
+		297375442CC986EB0070D793 /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
+		297375462CCA1EA10070D793 /* Cake Baker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cake Baker.swift"; sourceTree = "<group>"; };
+		297375482CCA21BF0070D793 /* WaterTraker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTraker.swift; sourceTree = "<group>"; };
+		2973754A2CCA22030070D793 /* WaterTraker 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterTraker 2.swift"; sourceTree = "<group>"; };
+		2973754C2CCD5E460070D793 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		29DAA6702CC62FB200862EA1 /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DAA6732CC62FB200862EA1 /* Recipe_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_AppApp.swift; sourceTree = "<group>"; };
 		29DAA6752CC62FB200862EA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +114,15 @@
 			children = (
 				29DAA6732CC62FB200862EA1 /* Recipe_AppApp.swift */,
 				29DAA6752CC62FB200862EA1 /* ContentView.swift */,
+				297375362CC635710070D793 /* Main Page.swift */,
+				2973753A2CC78B230070D793 /* New Recipe.swift */,
+				2973753C2CC808090070D793 /* Food Recipes  .swift */,
+				297375422CC9859C0070D793 /* Add Ingrediant  .swift */,
+				297375442CC986EB0070D793 /* CustomPopupView.swift */,
+				2973754C2CCD5E460070D793 /* Test.swift */,
+				297375482CCA21BF0070D793 /* WaterTraker.swift */,
+				2973754A2CCA22030070D793 /* WaterTraker 2.swift */,
+				297375462CCA1EA10070D793 /* Cake Baker.swift */,
 				29DAA6772CC62FB200862EA1 /* Assets.xcassets */,
 				29DAA6792CC62FB200862EA1 /* Preview Content */,
 			);
@@ -257,8 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2973754B2CCA22030070D793 /* WaterTraker 2.swift in Sources */,
+				297375492CCA21BF0070D793 /* WaterTraker.swift in Sources */,
+				2973753D2CC808090070D793 /* Food Recipes  .swift in Sources */,
 				29DAA6762CC62FB200862EA1 /* ContentView.swift in Sources */,
+				297375452CC986EB0070D793 /* CustomPopupView.swift in Sources */,
+				2973754D2CCD5E460070D793 /* Test.swift in Sources */,
+				2973753B2CC78B230070D793 /* New Recipe.swift in Sources */,
+				297375472CCA1EA10070D793 /* Cake Baker.swift in Sources */,
 				29DAA6742CC62FB200862EA1 /* Recipe_AppApp.swift in Sources */,
+				297375372CC635710070D793 /* Main Page.swift in Sources */,
+				297375432CC9859C0070D793 /* Add Ingrediant  .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

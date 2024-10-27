@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, SHADEN!")
-            Text ("Alhumood")
+   
+        NavigationView {
+            
+            NavigationLink(destination: New_Recipe()) {
+                Text("See All")
+                    .font(Font.custom("SF Pro Display", size: 12))
+                    .fontWeight(.medium)
+                    .foregroundColor(.orangee)
+                    .frame(width: 100)
+                    .underline()
+            }
         }
-        .padding()
+        
     }
 }
 

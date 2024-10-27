@@ -1,18 +1,53 @@
 //
-//  WaterTraker 2.swift
-//  Recipe App
+//  WaterUnitsView.swift
+//  WaterTracker
 //
-//  Created by Shaden Alhumood on 21/04/1446 AH.
+//  Created by Khawlah Khalid on 10/10/2023.
 //
 
 import SwiftUI
 
-struct WaterTraker_2: View {
+struct WaterCupsView: View {
+    let noOfCups: Int
+    @Binding var showWaterCupsView :Bool
+    @State var selectedCups: [Int] = []
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                Button {
+                    showWaterCupsView.toggle()
+                } label: {
+                    Image(systemName: "x.circle.fill")
+                        .font(.title)
+                        .foregroundColor(.blue)
+                        .padding()
+                }
+                Spacer()
+
+            }
+            Spacer()
+            HStack{
+                ForEach(0..<noOfCups,id: \.self) { i in
+                    Image(systemName: selectedCups.contains(i) ? "drop.fill" : "drop")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                            .onTapGesture {
+                                if selectedCups.contains(i){
+                                    selectedCups.removeAll {$0 == i}
+                                }
+                                else{
+                                    selectedCups.append(i)
+                                }
+                               
+                            }
+
+                }
+            }
+            Spacer()
+        }
+
     }
 }
-
 #Preview {
-    WaterTraker_2()
+    WaterCupsView(noOfCups: 9, showWaterCupsView: .constant(true))
 }
