@@ -1,18 +1,19 @@
 //
-//  New Recipe.swift
+//  EditPage.swift
 //  Recipe App
 //
-//  Created by Shaden Alhumood on 19/04/1446 AH.
+//  Created by Shaden Alhumood on 25/04/1446 AH.
 //
 
 import SwiftUI
 
-struct New_Recipe: View {
+struct EditPage: View {
     
     
-    @State private var title: String = ""
-    @State private var description: String = ""
-    @State private var showPopup = false
+    @State private var ingrediantTitle: String = ""         // Stores the Title TextField
+    @State private var ingrediantDescription: String = ""       // Stores the Description TextField
+    @State private var ingrediantPopup = false
+    @State private var ingredient: [String] = []         // Stores the list of tasks
     
     
     init() {
@@ -24,75 +25,43 @@ struct New_Recipe: View {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance}
     
     
-    
-    
     var body: some View {
         
-         NavigationStack{
-            
+        NavigationStack{
             
             ZStack{
-                VStack{
+                
+                VStack  {
                     
-                }
                 
-                .navigationTitle("New Recipe")
-                .toolbar
-                {
-                    
-                    ToolbarItem(placement:
-                            .navigationBarTrailing ) {
-                                Button(action: {
-                                    //                                Text("Save")
-                                    //                                    .foregroundColor(.orangee)
-                                })
-                                {
-                                    Text("Save")
-                                        .foregroundColor(.orangee)
-                                    
-                                }
-                            }
-                }
-                
-                
-                
-                VStack{
                     
                     ZStack{
                         
                         Rectangle()
-                            .fill(Color.greyy)
                             .strokeBorder(style: StrokeStyle(lineWidth: 2, dash:[5]))
                             .foregroundColor(.orangee)
                             .frame(width: 413, height: 200)
                         
                         
-                        VStack{
-                            Image(systemName:"photo.badge.plus")
-                                .resizable()
-                                .frame(width: 95, height: 70)
-                                .foregroundColor(.orangee)
-                                .fontWeight(.bold)
-                            
-                            
-                            Text("Upload Photo")
-                                .fontWeight(.bold)
-                                .font(.system(size: 22))
-                            
-                        }.padding()
                         
-                    }.padding()
+                        Image("halomi")
+                            .frame(width: 400, height: 195)
+                            .clipped()
+                        
+                        
+                    }
                     
                     
                     VStack(alignment: .leading){
                         Text("Title")
+                            .padding(.horizontal)
                             .fontWeight(.bold)
                             .font(.system(size: 24))
                             .foregroundColor(Color.white)
-                            .padding(3.0)
                         
                         
-                        TextField("Title", text: $title)
+                        TextField("Title", text: $ingrediantTitle)
+                            .padding(.horizontal)
                             .fontWeight(.regular)
                             .font(.system(size: 24))
                             .frame(width: 390, height: 47)
@@ -107,14 +76,15 @@ struct New_Recipe: View {
                     VStack(alignment: .leading){
                         
                         Text("Description")
+                            .padding(.horizontal)
                             .fontWeight(.bold)
                             .font(.system(size: 24))
                             .foregroundColor(Color.white)
                             .padding(3.0)
                         
                         
-                        TextField("Description", text: $description, axis:.vertical)
-                            .padding([.bottom, .trailing], 3.0)
+                        TextField("Description", text: $ingrediantDescription, axis:.vertical)
+                            .padding(.horizontal)
                             .frame(width: 390 )
                             .font(.system(size: 24))
                             .background(Color.greyy)
@@ -138,42 +108,53 @@ struct New_Recipe: View {
                         
                         Spacer(minLength: 180)
                         
+                        
+                        
                         Button(action: {
-                            showPopup.toggle()
+                            ingrediantPopup.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .foregroundColor(.orangee)
                         }
                         Spacer()
-                    }.padding()
-                   
+                    }
+                    
                 }
                 
-                
-                if showPopup {
+                if ingrediantPopup {
                     Color.black.opacity(0.4)
                         .ignoresSafeArea()
                         .onTapGesture {
-                            showPopup = false
+                            ingrediantPopup = false
                         }
                     CustomPopupView()
                         .transition(.scale)
                 }
                 
-            }.animation(.easeInOut, value: showPopup)
+            }.animation(.easeInOut, value: ingrediantPopup)
             
             
-        }
+                .navigationTitle("Halomi Salad")
+                .toolbar
+            {
+                
+                ToolbarItem(placement:
+                        .navigationBarTrailing ) {
+                            NavigationLink(destination: Food_Recipes__()) {
+                                Text("Save")
+                                    .foregroundColor(.orangee)
+                                
+                            }
+                        }
+                
+            }
+            
         
-    }
-        
-        
-        
-         
-        
-    }
 
+        }
+    }
+}
 
 #Preview {
-    New_Recipe()
+    EditPage()
 }

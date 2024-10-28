@@ -24,50 +24,52 @@ struct CardView: View {
                 LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.clear]), startPoint: .bottom, endPoint: .top)
                     .frame(width: 414, height: 272)
                 
+                Text("Halomi Salad")
+                    .font(Font.custom("Helvetica", size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .offset(x: 25, y: -55)
+//                  .frame(width: 400, height: 272)
+//                  .padding(.bottom)
                 
-                
-                
-                VStack (alignment: .leading){
+                Spacer()
                     
-                    Text("Halomi Salad")
-                        .font(Font.custom("Helvetica", size: 24))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .offset(x: 60, y: 60)
-//                      .frame(width: 400)
-//                      .padding()
-                    
-                    
-                    HStack {
-                      
-                            
-                        NavigationLink(destination: New_Recipe()) {
+                    HStack  {
+                         
+                        NavigationLink(destination: Recipe_Information_Page()) {
                             
                             Text("semi-hard cheese typically made from the milk of goats, sheep, or cows. It's known for its tangy taste and firm, chewy texture..")
+//                                .padding(.horizontal)
                                 .font(Font.custom("SF Pro Display", size: 12))
                                 .fontWeight(.medium)
-                                .foregroundColor(.white)
-                                .offset(x: 35, y: 20)
-                                .multilineTextAlignment(.leading) 
-//                                .frame(width: 400, height: 80)
-                            
+                                .foregroundColor(Color.white)
+                                .offset(x: 5, y: 30)
+
+                                
+                                
+                                
+//                                .font(Font.custom("SF Pro Display", size: 12))
+//                                .fontWeight(.medium)
+//                                .foregroundColor(.white)
+//                                .multilineTextAlignment(.leading)
+//                                .padding(.horizontal)
                             
                             Text("See All")
                                 .font(Font.custom("SF Pro Display", size: 12))
                                 .fontWeight(.medium)
                                 .foregroundColor(.orangee)
-                                .multilineTextAlignment(.trailing)
                                 .underline()
-                                .frame(width: 200 )
+                                .padding(.top,75)
                         }
-                    }.frame(width: 400, height: 100 )
+                    }
+                    .frame(width: 390, height: 100 )
                         .padding()
                     
                     
-                }
+                
                 
             }.shadow(radius: 10)
-                .padding()
+//                .padding()
             
         }
     }
@@ -100,20 +102,16 @@ struct Food_Recipes__: View {
             
             ToolbarItem(placement:
                     .navigationBarTrailing ) {
-                        Button(action: {
-                            print(" Add Recipe tapped")
-                            
-                        }) {
-                            
+                        NavigationLink(destination: New_Recipe()) {
                             Image(systemName: "plus")
                                 .foregroundColor(.orangee)
-                        }
+            }
                     }
         }
         
         ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        ForEach(0..<5) { _ in
+                        ForEach(0..<1) { _ in
                             CardView()
                                 .frame(width: 800, height: 280)
                         }

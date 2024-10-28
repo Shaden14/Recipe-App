@@ -26,7 +26,7 @@ enum SelectedButton {
 
 var body: some View {
 
-VStack/*(alignment: .leading)*/ {
+    /*(alignment: .leading)*/   VStack {
     
     
     Text("Ingrediant Name")

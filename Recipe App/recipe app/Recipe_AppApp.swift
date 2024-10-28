@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Recipe_AppApp: App {
+struct Recpie_app: App {
     var body: some Scene {
         WindowGroup {
             Main_Page()
