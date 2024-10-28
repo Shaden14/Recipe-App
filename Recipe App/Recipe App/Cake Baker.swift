@@ -71,6 +71,10 @@ struct CakeBaker: View {
                                 Image(systemName: "plus")
                             })
                         }}
+                   
+                    
+                    // here the popup start
+                    
                     .sheet(isPresented: $showAddCakeSheet, content: {
                         NavigationStack {
                             VStack(alignment: .leading) {
