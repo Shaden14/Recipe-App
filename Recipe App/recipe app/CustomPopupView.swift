@@ -133,7 +133,8 @@ var body: some View {
             Spacer()
             
             Rectangle()
-                .fill(Color.orange)
+                .fill(Color(red: 1.0, green: 0.008, blue: 0.0))
+            
                 .frame(width: 145, height: 36)
                 .overlay(
                     Group {

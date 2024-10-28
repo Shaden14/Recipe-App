@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct Gesture: View {
+    @State private var flag = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Tap Me")
+                  .font(.largeTitle)
+                  .foregroundColor(.white)
+                  .padding(15)
+                  .background(flag ? Color.green : Color.yellow)
+                  .onTapGesture {
+                                  flag.toggle()
+                              }
     }
 }
 

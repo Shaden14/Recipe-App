@@ -14,6 +14,9 @@
 		297375722CCE41AB0070D793 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297375712CCE41AB0070D793 /* testTests.swift */; };
 		2973757C2CCE41AB0070D793 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973757B2CCE41AB0070D793 /* testUITests.swift */; };
 		2973757E2CCE41AB0070D793 /* testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973757D2CCE41AB0070D793 /* testUITestsLaunchTests.swift */; };
+		2973758B2CCE41BE0070D793 /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973758A2CCE41BE0070D793 /* test1.swift */; };
+		2973758D2CCE41C80070D793 /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973758C2CCE41C80070D793 /* test2.swift */; };
+		2973758F2CCECF8A0070D793 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973758E2CCECF8A0070D793 /* Gesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		297375772CCE41AB0070D793 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2973757B2CCE41AB0070D793 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		2973757D2CCE41AB0070D793 /* testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2973758A2CCE41BE0070D793 /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
+		2973758C2CCE41C80070D793 /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
+		2973758E2CCECF8A0070D793 /* Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				297375602CCE41AA0070D793 /* testApp.swift */,
 				297375622CCE41AA0070D793 /* ContentView.swift */,
+				2973758A2CCE41BE0070D793 /* test1.swift */,
+				2973758C2CCE41C80070D793 /* test2.swift */,
+				2973758E2CCECF8A0070D793 /* Gesture.swift */,
 				297375642CCE41AB0070D793 /* Assets.xcassets */,
 				297375662CCE41AB0070D793 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2973758D2CCE41C80070D793 /* test2.swift in Sources */,
 				297375632CCE41AA0070D793 /* ContentView.swift in Sources */,
+				2973758F2CCECF8A0070D793 /* Gesture.swift in Sources */,
+				2973758B2CCE41BE0070D793 /* test1.swift in Sources */,
 				297375612CCE41AA0070D793 /* testApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

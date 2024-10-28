@@ -1,18 +1,45 @@
+////
+////  test2.swift
+////  test
+////
+////  Created by Shaden Alhumood on 24/04/1446 AH.
+////
 //
-//  test2.swift
-//  test
+//import SwiftUI
 //
-//  Created by Shaden Alhumood on 24/04/1446 AH.
+//struct PopupView: View {
+//    @Binding var tasks: [String]       // Binding to the main view's tasks array
+//    @State private var newTask: String = "" // Local state for the new task input
+//    @Environment(\.presentationMode) var presentationMode // For dismissing the popup
 //
-
-import SwiftUI
-
-struct test2: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    test2()
-}
+//    var body: some View {
+//        VStack(spacing: 20) {
+//            Text("Add a New Task")
+//                .font(.title2)
+//            
+//            // TextField for entering a new task
+//            TextField("Task name", text: $newTask)
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding()
+//            
+//            // Button to add the task and close the popup
+//            Button("Add Task") {
+//                if !newTask.isEmpty {
+//                    tasks.append(newTask) // Add the task to the list
+//                    newTask = ""          // Clear the input field
+//                    presentationMode.wrappedValue.dismiss() // Dismiss the popup
+//                }
+//            }
+//            .padding()
+//            .background(Color.green)
+//            .foregroundColor(.white)
+//            .cornerRadius(8)
+//        }
+//        .padding()
+//    }
+//}
+//
+//
+//#Preview {
+//    PopupView()
+//}
