@@ -16,7 +16,8 @@ struct Main_Page: View {
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance}
-    
+   
+
     var body: some View  {
         
 

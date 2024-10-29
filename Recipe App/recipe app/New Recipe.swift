@@ -10,11 +10,7 @@ import SwiftUI
 struct New_Recipe: View {
     
     
-    @State private var ingrediantTitle: String = ""         // Stores the Title TextField
-    @State private var ingrediantDescription: String = ""       // Stores the Description TextField
-    @State private var ingrediantPopup = false
-    @State private var ingredient: [String] = []         // Stores the list of tasks
-    
+
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -24,7 +20,8 @@ struct New_Recipe: View {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance}
     
-    
+    @StateObject private var customPopup = PopupViewModel ()
+
     
     
     var body: some View {
@@ -68,7 +65,7 @@ struct New_Recipe: View {
                             .foregroundColor(Color.white)
                         
                         
-                        TextField("Title", text: $ingrediantTitle)
+                        TextField("Title", text: $customPopup.ingrediantTitle)
                             .padding(.horizontal)
                             .fontWeight(.regular)
                             .font(.system(size: 24))
@@ -91,7 +88,7 @@ struct New_Recipe: View {
                             .padding(3.0)
                         
                         
-                        TextField("Description", text: $ingrediantDescription, axis:.vertical)
+                        TextField("Description", text: $customPopup.ingrediantDescription, axis:.vertical)
                             .padding(.horizontal)
                             .frame(width: 390 )
                             .font(.system(size: 24))
@@ -119,7 +116,7 @@ struct New_Recipe: View {
                         
                         
                         Button(action: {
-                            ingrediantPopup.toggle()
+                            customPopup.ingrediantPopup.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .foregroundColor(.orangee)
@@ -129,17 +126,17 @@ struct New_Recipe: View {
                     
                 }
                 
-                if ingrediantPopup {
+                if customPopup.ingrediantPopup {
                     Color.black.opacity(0.4)
                         .ignoresSafeArea()
                         .onTapGesture {
-                            ingrediantPopup = false
+                            customPopup.ingrediantPopup = false
                         }
                     CustomPopupView()
                         .transition(.scale)
                 }
                 
-            }.animation(.easeInOut, value: ingrediantPopup)
+            }.animation(.easeInOut, value: customPopup.ingrediantPopup)
             
             
                 .navigationTitle("New Recipe")
@@ -149,7 +146,7 @@ struct New_Recipe: View {
                 ToolbarItem(placement:
                         .navigationBarTrailing ) {
                             
-                            NavigationLink(destination: Food_Recipes__()) {
+                            NavigationLink(destination: MainRecpiesPage()) {
                                 Text("Save")
                                     .foregroundColor(.orangee)
                         

@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct EditPage: View {
-    
-    
-    @State private var ingrediantTitle: String = ""         // Stores the Title TextField
-    @State private var ingrediantDescription: String = ""       // Stores the Description TextField
-    @State private var ingrediantPopup = false
-    @State private var ingredient: [String] = []         // Stores the list of tasks
-    
+
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -23,6 +17,9 @@ struct EditPage: View {
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance}
+    
+    @StateObject private var customPopup = PopupViewModel ()
+
     
     
     var body: some View {
@@ -60,7 +57,7 @@ struct EditPage: View {
                             .foregroundColor(Color.white)
                         
                         
-                        TextField("Title", text: $ingrediantTitle)
+                        TextField("Title", text: $customPopup.ingrediantTitle)
                             .padding(.horizontal)
                             .fontWeight(.regular)
                             .font(.system(size: 24))
@@ -83,7 +80,7 @@ struct EditPage: View {
                             .padding(3.0)
                         
                         
-                        TextField("Description", text: $ingrediantDescription, axis:.vertical)
+                        TextField("Description", text: $customPopup.ingrediantDescription, axis:.vertical)
                             .padding(.horizontal)
                             .frame(width: 390 )
                             .font(.system(size: 24))
@@ -111,7 +108,7 @@ struct EditPage: View {
                         
                         
                         Button(action: {
-                            ingrediantPopup.toggle()
+                            customPopup.ingrediantPopup.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .foregroundColor(.orangee)
@@ -121,17 +118,17 @@ struct EditPage: View {
                     
                 }
                 
-                if ingrediantPopup {
+                if customPopup.ingrediantPopup {
                     Color.black.opacity(0.4)
                         .ignoresSafeArea()
                         .onTapGesture {
-                            ingrediantPopup = false
+                            customPopup.ingrediantPopup = false
                         }
                     CustomPopupView()
                         .transition(.scale)
                 }
                 
-            }.animation(.easeInOut, value: ingrediantPopup)
+            }.animation(.easeInOut, value: customPopup.ingrediantPopup)
             
             
                 .navigationTitle("Halomi Salad")
@@ -140,7 +137,7 @@ struct EditPage: View {
                 
                 ToolbarItem(placement:
                         .navigationBarTrailing ) {
-                            NavigationLink(destination: Food_Recipes__()) {
+                            NavigationLink(destination: MainRecpiesPage()) {
                                 Text("Save")
                                     .foregroundColor(.orangee)
                                 

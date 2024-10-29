@@ -11,6 +11,28 @@ import Foundation
 
 struct ViewModel: Identifiable{
     
+    @Published var title: String = ""
+    @Published var description: String = ""
+    @Published var showIngredientPopup: Bool = false
+    @Published var quantity: Int = 1
+    @Published var measurement: String = "spoon"
+    
+    
+    
+    @Published var ingrediednts: [RecipeIngredient] = []
+    
+    func toggleIngredientPopup(){
+        .withAnimation {
+            toggleIngredientPopup.toggle()
+        }
+    }
+    
+    func setMeasurement(to newMeasurement: String){
+        measurement = newMeasurement
+        quantity = 1
+        
+    }
+    
     // Add ingredient to the list
 
     func addIngredient(name: String) {

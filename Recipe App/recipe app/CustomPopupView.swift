@@ -13,10 +13,10 @@ struct CustomPopupView: View {
   
     
     
-@State var digitData = 1
+
     // Text Ingrediant Name
     let ingrediantName: String = "Ingrediant Name"
-    @State private var ingrediantText: String = ""
+
     
     // Text Measurment
     let measurmentTital: String = "Measurment"
@@ -26,21 +26,22 @@ struct CustomPopupView: View {
        case spoonButton, cupButton
     }
     @State private var selectedButton: SelectedButton?
+    
+    @StateObject private var customPopup = PopupViewModel ()
 
-    
-    
-    
+  
+
     
 var body: some View {
 
      VStack {
     
     
-    Text(ingrediantName)
+         Text(ingrediantName)
         .font(Font.custom("SF Pro", size: 20))
         .fontWeight(.bold)
     
-    TextField("Ingrediant Name", text: $ingrediantText)
+         TextField(measurmentTital, text: $customPopup.ingrediantText)
         .padding(.horizontal)
         .fontWeight(.regular)
         .font(.system(size: 14))
@@ -51,7 +52,7 @@ var body: some View {
         .padding()
     
     
-    Text(measurmentTital)
+         Text("Measurment")
         .font(Font.custom("SF Pro", size: 20))
         .fontWeight(.bold)
   
@@ -61,13 +62,13 @@ var body: some View {
             selectedButton = .spoonButton  // Select the first button
         }
         .padding()
-        .background(selectedButton == .spoonButton ? Color.orangee : Color.orangee)
+        .background( selectedButton == .spoonButton ? Color.orangee : Color.orangee)
         .foregroundColor(.white)
         .cornerRadius(8)
         
         
         Button("🥛 Cup") {
-            selectedButton = .cupButton  // Select the second button
+           selectedButton = .cupButton  // Select the second button
         }
         .padding()
         .background(selectedButton == .cupButton ? Color.orangee : Color.orangee)
@@ -100,9 +101,9 @@ var body: some View {
                 HStack {
                     HStack {
                         Button {
-                            if digitData == 1{}
+                            if customPopup.digitData == 1{}
                             else {
-                                digitData = digitData - 1
+                                customPopup.digitData = customPopup.digitData - 1
                             }
                         }  label: {
                             
@@ -114,14 +115,14 @@ var body: some View {
                         }
                         
                         
-                        Text("\(digitData)")
+                        Text("\(customPopup.digitData)")
                             .font(.system(size: 20))
                         
                         
                         Button {
-                            if digitData == 10 {}
+                            if customPopup.digitData == 10 {}
                             else {
-                                digitData = digitData + 1
+                                customPopup.digitData = customPopup.digitData + 1
                             }
                         }  label: {
                             

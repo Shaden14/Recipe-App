@@ -6,3 +6,10 @@
 //
 
 import Foundation
+//
+
+//struct PopupModel: Identifiable{
+//    
+//    let ingrediantName: String
+//    let measurmentTital: String
+//}

@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct Food_Recipes__: View {
+struct MainRecpiesPage: View {
     
     
     init() {
@@ -63,5 +63,5 @@ struct Food_Recipes__: View {
 
      
 #Preview {
-    Food_Recipes__()
+    MainRecpiesPage()
 }
