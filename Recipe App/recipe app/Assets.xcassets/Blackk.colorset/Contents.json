@@ -2,9 +2,9 @@
   "colors" : [
     {
       "color" : {
-        "color-space" : "srgb",
+        "color-space" : "extended-linear-srgb",
         "components" : {
-          "alpha" : "1.000",
+          "alpha" : "0.500",
           "blue" : "0x00",
           "green" : "0x00",
           "red" : "0x00"

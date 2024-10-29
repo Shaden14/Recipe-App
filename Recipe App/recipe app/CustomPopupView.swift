@@ -10,61 +10,67 @@ import SwiftUI
 
 
 struct CustomPopupView: View {
-
-@State private var texttitle: String = ""
-
-enum SelectedButton {
-   case first, second
-}
-
-@State private var selectedButton: SelectedButton?
-
-
+  
+    
+    
 @State var digitData = 1
+    // Text Ingrediant Name
+    let ingrediantName: String = "Ingrediant Name"
+    @State private var ingrediantText: String = ""
+    
+    // Text Measurment
+    let measurmentTital: String = "Measurment"
+    
+    // choose Measurment spoon or cup
+    enum SelectedButton {
+       case spoonButton, cupButton
+    }
+    @State private var selectedButton: SelectedButton?
 
-
-
+    
+    
+    
+    
 var body: some View {
 
-    /*(alignment: .leading)*/   VStack {
+     VStack {
     
     
-    Text("Ingrediant Name")
+    Text(ingrediantName)
         .font(Font.custom("SF Pro", size: 20))
         .fontWeight(.bold)
-    //                .padding()
     
-    TextField("Ingrediant Name", text: $texttitle)
+    TextField("Ingrediant Name", text: $ingrediantText)
+        .padding(.horizontal)
         .fontWeight(.regular)
         .font(.system(size: 14))
         .frame(width: 275, height: 39)
-        .background(Color(.gray))
+        .background(Color.gray)
         .cornerRadius(8)
+    
         .padding()
     
     
-    
-    
-    Text(" Measurment ")
+    Text(measurmentTital)
         .font(Font.custom("SF Pro", size: 20))
         .fontWeight(.bold)
   
     
-    HStack/*(spacing: 20)*/ {
+    HStack {
         Button("🥄 Spoon") {
-            selectedButton = .first  // Select the first button
+            selectedButton = .spoonButton  // Select the first button
         }
         .padding()
-        .background(selectedButton == .first ? Color.orangee : Color.orangee)
+        .background(selectedButton == .spoonButton ? Color.orangee : Color.orangee)
         .foregroundColor(.white)
         .cornerRadius(8)
         
         
         Button("🥛 Cup") {
-            selectedButton = .second  // Select the second button
+            selectedButton = .cupButton  // Select the second button
         }
         .padding()
-        .background(selectedButton == .second ? Color.orangee : Color.orangee)
+        .background(selectedButton == .cupButton ? Color.orangee : Color.orangee)
         .foregroundColor(.white)
         .cornerRadius(8)
         
@@ -133,17 +139,16 @@ var body: some View {
             Spacer()
             
             Rectangle()
-                .fill(Color(red: 1.0, green: 0.008, blue: 0.0))
-            
+                .fill(Color.orangee!)
                 .frame(width: 145, height: 36)
                 .overlay(
                     Group {
                         if let selected = selectedButton {
                             switch selected {
-                            case .first:
+                            case .spoonButton:
                                 Text("🥄 Spoon")
                                     .foregroundColor(.white)
-                            case .second:
+                            case .cupButton:
                                 Text("🥛 Cup")
                                     .foregroundColor(.white)
                                 
