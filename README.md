@@ -1,11 +1,26 @@
+
+![Large@1x](https://github.com/user-attachments/assets/a06d9ca9-abd1-49f0-8cc6-cfc18b3496ca)
+
+
+
 # Recipe-App
 
 A Recipe App is a mobile application designed to help users discover, organize, and prepare recipes. It typically offers features to explore various dishes, follow step-by-step cooking instructions, manage ingredients.
 
-## Recipe App UI Design 
+## UI Design 
 [Recipe App UI Design](https://www.sketch.com/s/356aff22-c3de-45c2-b87e-9516cb32d503/p/6EADEFB6-21D5-4456-B257-46D594883855/canvas#Inspect)
 
-### Why the project is useful
+## Features :
+
+- You can add your recipe image , title , description and ingredients.
+
+- You can edit/delete a recipe.
+
+- You can search recipes from recipes list.
+
+- The app is adaptable to Dark/Light mode
+
+## Why the project is useful
 
 - Recipe apps help users plan meals for the week or organize recipes they want to try. This makes it easy to shop for ingredients and avoid last-minute cooking stress.
 - Recipe app provide step-by-step instructions with photos and description , making it easy for users to follow along.
